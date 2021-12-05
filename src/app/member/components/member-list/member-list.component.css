@@ -1,0 +1,58 @@
+.custom-card {
+    border-radius:8px;
+    background-color:#fff;
+    padding:16px;
+    border:solid 1px #ccc;
+    box-shadow:3px 3px 6px rgb(0 0 0 / 18%)
+}
+.custom-card:hover {
+    border:solid 1px #ccc;
+} 
+.profile-img {
+    width:100%;
+    margin-bottom:16px;
+}
+.profile-img span {
+    width:50px;
+    height:50px;
+    margin:0 auto;
+    border-radius:50%;
+    background-color:#3f51b5;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:12px;
+    font-size:16px;
+    color:#fff;
+}
+
+.no-result {
+    margin: 0 auto;
+    padding: 15px;
+    text-align: center;
+}
+
+.no-result p {
+    color: #0badd5;
+    font-size: 16px;
+    text-align: center;
+}
+
+.no-result img {
+    width: 100%;
+    max-width:75px
+}
+
+.total-record-count-info {
+    text-align: left;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.total-record-count-info span {
+    color: #3f51b5;
+}
+.display-rec {
+    font-size: 14px;
+    color: #707070;
+}

@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+ .flex-fill {
+    flex: 1 1 auto;
+}
+
+.section-loader {
+    position: absolute;
+    top:0;
+    bottom :0;
+    left:0;
+    right:0;
+}
+
+.section-loader mat-spinner,
+.section-loader mat-spinner svg {
+    width : 40px !important;
+    height: 40px !important;
+}
+
+.section-loader mat-spinner {
+    margin:0 auto;
+}
+
+button:focus {
+    outline:none !important;
+     outline: none !important;
+}

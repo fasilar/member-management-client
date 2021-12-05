@@ -1,0 +1,47 @@
+<div class="d-flex h-100 flex-column">
+    <div class="flex-fill position-relative overflow-auto">
+        <div class="h-100 w-100 d-flex align-items-center"
+            *ngIf="(!loading && (!members || !members.length));else memberList">
+            <div class="no-result">
+                <img src="../../../../assets/images/no-data.svg" alt="">
+                <p class="small">No Results</p> 
+            </div>
+        </div>
+        <div class="h-100 w-100 d-flex align-items-center bg-light section-loader" *ngIf="loading">
+            <mat-spinner></mat-spinner>
+        </div>
+        <ng-template #memberList>
+            <div class="total-record-count-info">
+                Displaying
+                <span class="display-rec">{{members.length}}</span>
+                Record{{members.length > 1 ? 's' :''}}
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-12 pb-4" *ngFor="let member of members">
+                    <div class="card custom-card p-3">
+                        <div class="d-flex">
+                            <div class="flex-auto mr-4">
+                                <div class="profile-img">
+                                    <span>{{member.ShortName}}</span>
+                                </div>
+                            </div>
+                            <div class="flex-fill">
+                                <div class="user-info">
+                                    <div class="d-block">
+                                        <strong> First Name : </strong>{{member.FirstName}}
+                                    </div>
+                                    <div class="d-block">
+                                        <strong> Last Name : </strong>{{member.LastName}}
+                                    </div>
+                                    <div class="w-100">
+                                        <strong> DOB: </strong>{{member.DateOfBirth}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </div>
+</div>

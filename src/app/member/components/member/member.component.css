@@ -1,0 +1,7 @@
+member-list {
+    height: calc(100vh - 162px);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}

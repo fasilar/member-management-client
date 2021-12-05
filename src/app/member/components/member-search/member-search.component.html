@@ -1,0 +1,47 @@
+<div class="d-flex h-100">
+    <form #memberSearchForm="ngForm" class="w-100">
+        <div class="d-flex align-items-center">
+            <div class="flex-fill">
+                <h2>Members</h2>
+            </div>
+            <div class="flex-auto">
+                <div class="d-inline-block mr-2">
+                    <mat-form-field class="custom-input w-100" appearance="outline">
+                        <mat-label>Service Date</mat-label>
+                        <input readonly matInput name="serviceDate" [min]="minServiceDate" [max]="maxServiceDate"
+                            id="serviceDate" [matDatepicker]="picker" [(ngModel)]="searchPrams.ServiceDate">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="d-inline-block mr-2">
+                    <mat-form-field class="custom-input w-100" appearance="outline">
+                        <mat-label>Policy Number</mat-label>
+                        <input matInput name="policyNumber" maxlength="10" numbersOnly id="policyNumber"
+                            [(ngModel)]="searchPrams.PolicyNumber" [pattern]="REGEX.TEN_INTEGER_DIGIT">
+                        <mat-error *ngIf="memberSearchForm?.controls?.policyNumber?.hasError('pattern')">Invalid policy
+                            number</mat-error>
+                    </mat-form-field>
+
+                </div>
+                <div class="d-inline-block mr-2">
+                    <mat-form-field class="custom-input w-100" appearance="outline">
+                        <mat-label>Member Card Number</mat-label>
+                        <input matInput name="memberCardNumber" maxlength="10" numbersOnly
+                            [(ngModel)]="searchPrams.MemberCardNumber" [pattern]="REGEX.TEN_INTEGER_DIGIT">
+                        <mat-error *ngIf="memberSearchForm?.controls?.memberCardNumber?.hasError('pattern')">Invalid
+                            member card number</mat-error>
+                    </mat-form-field>
+
+                </div>
+                <div class="d-inline-block mr-2">
+                    <button mat-raised-button (click)="onSearch()" [disabled]="memberSearchForm.invalid || !searchPrams || 
+                    (!searchPrams.PolicyNumber && !searchPrams.MemberCardNumber)" color="primary">Search</button>
+                </div>
+                <div class="d-inline-block">
+                    <button mat-raised-button (click)="reset()" color="primary">Reset</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
