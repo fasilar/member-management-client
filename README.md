@@ -1,11 +1,11 @@
-# MemberManagement
+# Member Management
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
 
 ## Instructions
 
-1. Run API project and replace the API Base URL in environments.ts file
-2. Run `npm install` to install all packages specified in package.json
+1. Run API project (`Git Repo - https://github.com/fasilar/memeber-management-api.git`) and replace the API Base URL in `environments.ts` file
+2. Run `npm install` to install all packages specified in `package.json`
 
 ## Development server
 
@@ -27,8 +27,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 4. A field 'Service Date' does nothing, but it displays a nice date picker 
         => Validations : 
             1. Restrict the dates in the datepicker to 30 days in the past month, to 30 days in the future.
-5. Make sure the results for the specified parameters are cached for an hour
-
+5. The results will be cached for an hour
 
 ## Considerations & Decisions
 
