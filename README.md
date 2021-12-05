@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Instructions
 
-1. Run API project (`Git Repo - https://github.com/fasilar/memeber-management-api.git`) and replace the API Base URL in `environments.ts` file `( Now API is set to run in port '44331' & the Base URL will be  'https://localhost:44331/api/')`
+1. Run API project (`Git Repo - https://github.com/fasilar/memeber-management-api.git`) and replace the API Base URL in `environments.ts` file ( Now API is set to run in port - 44331 & the Base URL will be  `https://localhost:44331/api/`)
 2. Run `npm install` to install all packages specified in `package.json`
 
 ## Development server
